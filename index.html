@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Document</title>
+    <title>Tugas Akhir</title>
     <!-- CSS bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
@@ -22,7 +22,7 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-pink">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">My <span>Curriculum</span></a>
+        <a class="navbar-brand" href="#">My<span>Curriculum</span></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,9 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home"
-                >Home</a
-              >
+              <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
@@ -67,7 +65,7 @@
       <img src="images/bg2.jpg" />
       <div class="home-text">
         <h1>Mita Aswanti Anjalina Hutagalung</h1>
-        <p>Design Grafis</p>
+        <h3>Design Grafis</h3>
       </div>
     </section>
 
@@ -120,63 +118,67 @@
       </div>
     </section>
 
-    <section class="Skills" id="Skills">
-      <img src="images/skill.jpg" class="img-skill" alt="" />
-      <h2>Kemampuan</h2>
-      <div class="skil-text">
-        <li>
-          <a
-            href="#https://www.microsoft.com/id-id/microsoft-365/free-office-online-for-the-web"
-            class="link"
-            >Microsoft Office</a
-          >
-        </li>
-        <li>
-          <a href="https://visualstudio.microsoft.com/">Visual Studio</a>
-        </li>
-        <li>
-          <a
-            href="https://www.adobe.com/products/xd/learn/get-started-xd-design.html"
-            >Adobe XD</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads"
-            >SQL Server</a
-          >
-        </li>
-        <li>
-          <a href="https://www.sap.com/products/erp/business-one.html"
-            >SAP Business</a
-          >
-        </li>
-        <li><a href="https://www.canva.com/id_id/">Canva</a></li>
+    <section class="Skill" id="Skill">
+      <h1>Kemampuan</h1>
+      <div class="skill-conteiner">
+        <div class="card">
+          <img src="images/Microsoft-Office.jpg" class="img-skill" id="mc" />
+        </div>
+        <div class="card">
+          <img src="images/vs.png" class="img-skill" alt="" />
+        </div>
+        <div class="card">
+          <img src="images/xd.png" class="img-skill" alt="" />
+        </div>
+        <div class="card">
+          <img src="images/SAP.webp" class="img-skill" alt="" />
+        </div>
+        <div class="card">
+          <img src="images/canva.png" class="img-skill" alt="" />
+        </div>
       </div>
     </section>
     <section class="Interests" id="Interests">
+      <label for="tambah" style="color: black">Tambahkan Keahlian</label>
+      <input type="text" id="tambh" />
+      <button onclick="cetak">Tambahkan</button>
       <h2>Keahlian</h2>
-
-      <p>
+      <div id="list">
         <li>Manajemen Waktu</li>
         <li>Pemrograman</li>
         <li>Design</li>
         <li>SAP Consultan</li>
-      </p>
+      </div>
     </section>
+
     <section class="Award" id="Award">
       <h2>Pencapian</h2>
-
       <p>
-        <li>
-          Sampai saat ini pencapaian yang pernah saya dapatkan adalah Gelar
-          Sarjana yang saya pakai sekarang ini
-        </li>
+        Sampai saat ini pencapaian yang pernah saya dapatkan adalah Gelar
+        Sarjana yang saya pakai sekarang ini. <br />
+        Terima kasih untuk Hactiv8 dengan kemampuan kecil ini saya percaya diri
+        untuk melamar ke perusahan berbasis Teknologi Informasi
       </p>
     </section>
+    <script src="js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
     <script
       type="text/javascript"
+      ;
       src="https://cdn.prinsh.com/NathanPrinsley-effect/efek-salju.js"
+      ;
     ></script>
+    <script>
+      const tambah = document.getElementById("list");
+      function cetak() {
+        let isi = document.getElementById("tambh").value;
+
+        tambah.innerHTML = tambah.innerHTML + `<li>${isi}</li>`;
+      }
+    </script>
   </body>
 </html>
